@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -83,17 +84,42 @@
                 <div class="title m-b-md">
                     Mi Registro V7
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+    <div class="row justify-content-center">
+        <div class="col-md-8" offset-md-2>
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                    <div class="card text-center">
+                        <h3 class="card-title">Atletas</h3>
+                        <div class="card-body">
+                            <a href="{{ route('admin.people.index') }}">
+                                <img src="https://picsum.photos/300/200" class="img-thumbnail" alt="...">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                <div class="col mb-4">
+                    <div class="card text-center">
+                        <h3 class="card-title">Organizador</h3>
+                        <div class="card-body">
+                            <a href="#">
+                                <img src="https://picsum.photos/300/200" class="img-thumbnail" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card text-center">
+                        <h3 class="card-title">Evento</h3>
+                        <div class="card-body">
+                            <a href="#">
+                                <img src="https://picsum.photos/300/200" class="img-thumbnail" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
             </div>
         </div>
     </body>

@@ -20,3 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Rutas del administrador
+
+Route::resource('people', 'Admin\PersonController')->names('admin.people');
+
+
+// Tratamiento de imagen
+
+Route::post('images/{id}','Admin\ImageController@ver')->name('images.ver');
