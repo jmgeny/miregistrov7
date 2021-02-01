@@ -83,7 +83,7 @@ class RegisterController extends Controller
         $person = new Person;
         $person->name = $user->name;
         $person->surname = $user->surname;        
-        $person->user_id = 1;
+        $person->user_id = $user->id;
 
         $person->save();
 

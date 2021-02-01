@@ -92,10 +92,13 @@ class PersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Person $person)
+    public function destroy($id)
     {
-        $person->delete();
-        
+        $user = User::find($id);
+        // $person->delete();
+      
+        $user->delete();
+
         $people = Person::orderBy('name')->paginate(10);
         return view('admin.person.index',compact('people'));
     }

@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h1 class="float-left">Editar Usuarios</h1>
+                    <h1 class="float-left">Editar Atleta</h1>
                     <a class="btn btn-primary float-right" href="{{ route('admin.people.index') }}">Regresar</a>
                 </div>
                 <form action="{{ route('admin.people.update',$person->id) }}" method="POST">
@@ -29,6 +29,10 @@
                         <div class="form-group">
                             <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección"
                             value="{{ old('direccion',$person->direccion) }}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad"
+                            value="{{$person->city}}">
                         </div>
                         <div class="form-group">
                             <input type="date" class="form-control" id="birthday" name="birthday" placeholder="Fecha de Nacimiento"

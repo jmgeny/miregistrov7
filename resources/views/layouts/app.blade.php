@@ -51,7 +51,7 @@
                         @else
                         <nav class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><strong>Atleta</strong></a>                             
+                                <a class="nav-link" href="#"><strong>Usuario</strong></a>                             
                             </li>
                         </nav>    
                             <li class="nav-item dropdown">

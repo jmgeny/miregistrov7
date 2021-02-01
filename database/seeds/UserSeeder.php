@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Person;
 
 class UserSeeder extends Seeder
 {
@@ -23,5 +24,14 @@ class UserSeeder extends Seeder
 	        'email' => 'admin@admin.com',
 	        'password' => Hash::make('admin')
     	]);
+
+        $person = new Person;
+        $person->name = $useradmin->name;
+        $person->surname = $useradmin->surname;        
+        $person->user_id = $useradmin->id;
+
+        $person->save();
+
+        $useradmin->person()->save($person);
     }
 }

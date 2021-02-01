@@ -6,13 +6,26 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h1>Usuarios</h1>
-                    <a class="btn btn-primary float-right" href="{{ route('admin.people.index') }}">Regresar</a>
+                    <h1>Crear Atleta</h1>
+                    <a class="btn btn-primary float-right" href="{{ route('admin.people.index') }}">Listar</a>
                 </div>
                 <div class="card-body">
-                	<form action="">
-                    	<input type="text" value="{{ auth()->user()->id }}" name="user_id" hidden>
-                		<strong>Formulario de creación No existiria ya que se crea con el usuario</strong>
+                	<form>
+                		<h5>El atleta se crea al momento de Registrarse</h5> <br>
+                        @guest
+                            <a href="{{ route('register') }}" class="btn btn-primary">Resitrarse</a>
+                        @else
+                            <h3>{{ Auth::user()->name }}</h3>
+                            <a class="btn btn-primary" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Salir
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                        @endguest    
                 	</form>
                 </div>
             </div>

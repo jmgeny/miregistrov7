@@ -6,8 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h1 class="float-left">Ver Usuarios</h1>
-                    <a class="btn btn-primary float-right" href="{{ route('admin.people.index') }}">Regresar</a>
+                    <h1 class="float-left">Ver Atleta</h1>
+                    <a class="btn btn-primary float-right" href="{{ route('admin.people.index') }}">Listar</a>
                 </div>
             <form>
                 <div class="card-body">
@@ -27,6 +27,10 @@
                             <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección"
                             value="{{$person->direccion}}" readonly>
                         </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad"
+                            value="{{$person->city}}" readonly>
+                        </div>                        
                         <div class="form-group">
                             <input type="date" class="form-control" id="birthday" name="birthday" placeholder="Fecha de Nacimiento"
                             value="{{$person->birthday}}" readonly>

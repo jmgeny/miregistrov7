@@ -15,11 +15,14 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete("cascade");
             $table->string('name')->nullable();
             $table->string('surname')->nullable();
             $table->string('dni')->nullable();
             $table->string('direccion')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('country')->nullable();
             $table->date('birthday')->nullable();
             $table->enum('genero',['Hombre','Mujer'])->default('Hombre');
             $table->string('telefono')->nullable();
